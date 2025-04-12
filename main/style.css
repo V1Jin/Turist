@@ -1,0 +1,44 @@
+.page{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 20px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+.map{
+    width: 800px;
+    height: 700px;
+    border-radius: 30px;
+
+}
+
+.interactive_map{
+    display: flex;
+}
+
+.info-box {
+    position: absolute;
+    width: 350px;
+    top: 100px;
+    right: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 15px;
+    z-index: 1000;
+    display: none;
+  }
+  
+
