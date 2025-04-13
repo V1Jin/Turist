@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="2Nets" content="App for presentation by 2Nets team" />
+  <title>React App</title>
+
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+  <div id="root">
+    <div class="app">
+      <header class="header">
+        <div class="container">
+          <h1 class="header__title">
+            Visit
+            <img src="img/kuban_flag.svg" class="header__icon" />
+            <span>Kuban</span>
+          </h1>
+          <nav class="header__nav">
+            <a class="header__nav-link" href="#">About</a>
+            <a class="header__nav-link" href="#">Favourites</a>
+            <a class="header__nav-link" href="#">FAQ</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="intro">
+        <div class="container">
+          <video class="fullsize_video" autoPlay loop>
+            <source src="img/preview_3.mp4" type="video/webm" />
+          </video>
+          <div class="intro__sign">
+            <h1 class="intro__sign-title">
+              MAKE YOUR LIFE AN ADVENTURE
+            </h1>
+            <p class="intro__sign-subtitle">
+              Welcome to Kuban
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav_menu">
+        <div class="container">
+          <div class="nav_menu__list">
+            <div class="nav_menu__text">
+              <h1>Explore amazing places</h1>
+              <p>
+                The center of Krasnodarskiy Krai - Krasnodar city
+              </p>
+            </div>
+
+          </div>
+      </nav>
+
+      <div class="gallery">
+        <div class="container">
+          <div class="columns">
+            <div class="column column">
+              <div class="gallery__item">
+                <img src="./img/1.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/2.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/3.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/4.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/7.jpg" />
+              </div>
+            </div>
+
+            <div class="column column-reverse">
+              <div class="gallery__item">
+                <img src="./img/5.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/6.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/7.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/8.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/13.jpg" />
+              </div>
+            </div>
+
+            <div class="column column">
+              <div class="gallery__item">
+                <img src="./img/9.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/10.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/11.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/12.jpg" />
+              </div>
+              <div class="gallery__item">
+                <img src="./img/3.jpg" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="map">
+
+        <div class="container">
+          <div id="container">
+
+          </div>
+
+          <div class="info-box">
+            <h2 class="info-title">National museum of Republic Adigeya</h2>
+
+            <img
+              src="https://7d9e88a8-f178-4098-bea5-48d960920605.selcdn.net/e6b4bdf9-29e0-4d45-ae02-21efd3182c42/-/format/webp/-/resize/1300x/"
+              class="info-pic" />
+
+            <p class="info-text">The main museum of Adigeya Republic, where expositions of history, culrute and nature of region are represented. The main interest consists of archeological foundations and ethnographic collections</p>
+
+            <button class="info-btn">
+              Learn more
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider">
+        <div class="container">
+          <h1 class="slider__title">
+            Enjoy your vacation for 100/100
+          </h1>
+        </div>
+        <div class="scroller" data-direction="right" data-speed="slow">
+          <div class="scroller__inner">
+            <img src="img/hotels/1.jpg" />
+            <img src="img/hotels/2.jpg" />
+            <img src="img/hotels/3.jpg" />
+            <img src="img/hotels/4.jpg" />
+            <img src="img/hotels/5.jpg" />
+          </div>
+        </div>
+        <div class="scroller" data-direction="left" data-speed="slow">
+          <div class="scroller__inner">
+            <img src="img/hotels/6.jpg" />
+            <img src="img/hotels/7.jpg" />
+            <img src="img/hotels/8.jpg" />
+            <img src="img/hotels/9.jpg" />
+            <img src="img/hotels/10.jpg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+
+    const scrollers = document.querySelectorAll(".scroller");
+
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      addAnimation();
+    }
+
+    function addAnimation() {
+      scrollers.forEach((scroller) => {
+        // add data-animated="true" to every `.scroller` on the page
+        scroller.setAttribute("data-animated", true);
+
+        // Make an array from the elements within `.scroller-inner`
+        const scrollerInner = scroller.querySelector(".scroller__inner");
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        // For each item in the array, clone it
+        // add aria-hidden to it
+        // add it into the `.scroller-inner`
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute("aria-hidden", true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      });
+    }
+
+
+
+  </script>
+
+
+  <script src="https://mapgl.2gis.com/api/js/v1"></script>
+  <script src="https://unpkg.com/@2gis/mapgl-clusterer@^2/dist/clustering.js"></script>
+  <script src="js/map2.js"></script>
+
+
+</body>
+
+</html>

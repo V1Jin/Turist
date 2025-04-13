@@ -1,0 +1,66 @@
+#container {
+    height: 60rem;
+    width: 100%;
+
+    flex-basis: calc(100% - 37rem);
+    flex-grow: 1;
+}
+
+#container canvas {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #e9e9e9;
+}
+
+.map {
+    padding: 6rem 0;
+}
+
+.map .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.info-box {
+    flex-basis: 350px;
+    background: white;
+    border: 2px solid #e9e9e9;
+    border-radius: 8px;
+    padding: 2rem;
+} 
+
+.info-title {
+    font-size: 2.4rem;
+    line-height: 100%;
+    margin-bottom: 2rem;
+}
+.info-text {
+    font-size: 1.6rem;
+}
+.info-pic {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+.info-btn {
+    padding: 1.4rem 2.4rem;
+    background-color: #2856d3;
+    color: #fff;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16rem;
+    height: 4rem;
+
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+}

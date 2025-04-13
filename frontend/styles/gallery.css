@@ -1,0 +1,56 @@
+.columns {
+	display: flex;
+    justify-content: space-between;
+
+    height: 280dvh;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+    gap: 2rem;
+
+    max-width: calc((100% - 4rem) / 3);
+    width: 100%;
+}
+
+.gallery__item {
+    height: 60rem;
+    width: 100%;
+    overflow: hidden;
+	border-radius: 8px;
+}
+.gallery__item img {
+    object-fit: 100%;
+    height: 60rem;
+    min-width: 100%;
+}
+
+.column-reverse {
+	transform: translateY(calc(-300% + 300vh));
+}
+
+.columns {
+	overflow-y: hidden;
+}
+
+.column-reverse {
+	flex-direction: column-reverse;
+}
+
+@keyframes adjust-position {
+	/* Start position: shift entire column up, but not so that it goes out of view */
+	from {
+		transform: translateY(calc(-100% + 200vh));
+	}
+
+	/* End position: shift entire column down, but not so that it goes out of view */
+	to {
+		transform: translateY(calc(100% - 200vh));
+	}
+}
+
+.column-reverse {
+	animation: adjust-position linear forwards;
+	animation-timeline: scroll(root block);
+}

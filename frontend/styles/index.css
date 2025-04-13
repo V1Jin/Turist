@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+@import url('./header.css');
+@import url('./intro.css');
+@import url('./nav.css');
+@import url('./gallery.css');
+@import url('./map.css');
+@import url('./slider.css');
+
+@font-face {
+  font-weight: 400;
+  font-family: "wasted-windey";
+  src: url(../fonts/wasted-vindey.ttf);
+}
+
+@font-face {
+  font-family: ;
+  src: url();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
