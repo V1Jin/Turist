@@ -1,0 +1,27 @@
+.footer {
+    background-color: #14123f;
+    width: 100%;
+    padding: 6rem 0 8rem 0;
+}
+.footer .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    gap: 4rem;
+}
+.footer .tunets_logo {
+    height: 5rem;
+    opacity: 90%;
+}
+.footer .voronka_logo {
+    height: 5rem;
+    opacity: 90%;
+}
+.scroller__inner img {
+    height: 15rem;
+}
+
+.choose__overlay .container {
+    max-width: calc(100% - 2rem);
+}

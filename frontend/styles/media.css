@@ -1,0 +1,36 @@
+@media (max-width: 1024px) {
+    .header__nav-link {
+        display: none;
+    }
+    .header__lang_btn {
+        display: block;
+    }
+    .intro__sign {
+        width: calc(100% - 4rem);;
+    }
+
+    .column-reverse {
+        display: none;
+    }
+    .column {
+        max-width: calc(50% - 1rem);
+    }
+    .gallery__item {
+        height: 20rem;
+    }
+    .gallery__item img {
+        height: 100%;
+    }
+    .columns {
+        height: initial;
+    }
+
+    .map .container {
+        flex-direction: column-reverse;
+    }
+
+}
+
+.slider {
+    padding-bottom: 6rem;
+}
