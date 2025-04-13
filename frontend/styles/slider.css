@@ -1,5 +1,4 @@
 .scroller {
-    
     overflow: hidden;
 }
 
@@ -12,15 +11,17 @@
 
 .scroller__inner {
     padding-block: 1rem;
+    padding-top: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 .slider__title {
-    font-size: 6.4rem;
-    font-weight: 500;
-    font-family: "wasted-windey";
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: "Unbounded";
+
     margin-bottom: 3rem;
 }
 

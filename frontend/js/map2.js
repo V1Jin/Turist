@@ -4,7 +4,7 @@ let sochiLandmarks = [];
 // Функция для загрузки данных о достопримечательностях Сочи
 async function fetchSochiLandmarks() {
     try {
-        const response = await fetch("http://localhost:5000/api/dataOrgs");
+        const response = await fetch("http://10.2.0.254:5000/api/dataOrgs");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
